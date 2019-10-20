@@ -1,0 +1,46 @@
+[alias]
+  a = add
+  b = branch
+  bc = !"git branch --merged origin/master | grep -vE 'HEAD' | xargs git branch -d"
+  bd = branch -D
+  bn = switch -c
+  br = merge-base origin/master HEAD
+  c = commit
+  cc = !"git restore $(git merge-base origin/master HEAD)"
+  cf = !"git rebase -i $(git merge-base origin/master HEAD)"
+  co = checkout
+  cp = cherry-pick
+  cw = !"git commit --allow-empty -m '[ci skip] wip'"
+  d = diff
+  f = fetch --prune
+  om = co origin/master
+  pf = push --force-with-lease
+  pl = pull
+  pu = !"git push -u origin $(git branch --format='%(refname:short)' --contains)"
+  rev = !"sh -c 'git stash -u && git fetch && git checkout origin/$1' -"
+  ro = rebase origin/master
+  rs = restore
+  s = status
+  spo = stash pop
+  spu = stash -u
+  sw = switch
+  tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+[color]
+  ui = true
+[user]
+  email = ohigashi.yuta@qiita.com
+  name = Yuta Ohigashi
+[core]
+  pager = less -r -M
+[rebase]
+  autosquash = true
+[tig "bind"]
+  diff = F ?!git commit --fixup %(commit)
+  diff = S ?!git commit --squash %(commit)
+  main = F ?!git commit --fixup %(commit)
+  main = H ?!git reset %(commit)
+  main = R ?!git rebase -i %(commit)
+  main = S ?!git commit --squash %(commit)
+  status = C !git commit -v
+[advice]
+	detacheadHead = false
