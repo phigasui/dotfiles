@@ -8,21 +8,21 @@
   c = commit
   cc = !"git restore $(git merge-base origin/master HEAD)"
   cf = !"git rebase -i $(git merge-base origin/master HEAD)"
-  co = checkout
   cp = cherry-pick
-  cw = !"git commit --allow-empty -m '[ci skip] wip'"
+  cw = !"git add . && git commit --allow-empty -m '[ci skip] wip'"
   d = diff
+  dt = switch -d
   f = fetch --prune
-  om = co origin/master
+  om = !"git fetch --prune && git switch -d origin/master"
   pf = push --force-with-lease
   pl = pull
   pu = !"git push -u origin $(git branch --format='%(refname:short)' --contains)"
-  rev = !"sh -c 'git stash -u && git fetch && git checkout origin/$1' -"
+  rev = !"sh -c 'git cw && git fetch && git switch -d origin/$1' -"
+  r = rebase
   ro = rebase origin/master
   rs = restore
+  rsu = restore --stage
   s = status
-  spo = stash pop
-  spu = stash -u
   sw = switch
   tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
 [color]
@@ -32,6 +32,7 @@
   name = Yuta Ohigashi
 [core]
   pager = less -r -M
+  excludesfile = /Users/h-1456/.gitignore_global
 [rebase]
   autosquash = true
 [tig "bind"]
@@ -43,4 +44,4 @@
   main = S ?!git commit --squash %(commit)
   status = C !git commit -v
 [advice]
-	detacheadHead = false
+  detachedHead = false
