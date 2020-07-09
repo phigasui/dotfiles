@@ -20,9 +20,10 @@ precmd () {
 }
 #add-zsh-hook precmd _update_vcs_info_msg
 PROMPT=""
+PROMPT+="%F{yellow}%* %f"
 # PROMPT="%{${fg[green]}%}"
 PROMPT+="%n%{${reset_color}%}"
-PROMPT+="@%F{blue}%m%f"
+PROMPT+="@%m%f"
 PROMPT+="%1(v|%F{red}%1v%f|)"
 # RPROMPT='%F{green}%d%f'
 PROMPT+=':%F{green}%~%f'
@@ -175,12 +176,13 @@ function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 # added by travis gem
 [ -f /Users/yuta_oohigashi/.travis/travis.sh ] && source /Users/yuta_oohigashi/.travis/travis.sh
 
-
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/h-1456/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/h-1456/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/h-1456/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/h-1456/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
