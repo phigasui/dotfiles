@@ -92,6 +92,7 @@ alias sudo="sudo " # For using local alias
 alias t="tig"
 alias timestamp='date +%s.%N'
 alias unmount='diskutil unmount'
+alias julia="$HOME/julia/julia"
 
 # source ~/.git-completion.
 
@@ -150,7 +151,6 @@ function loadpath() {
 loadpath $HOME/.bin
 loadpath $HOME/.pyenv/shims
 loadpath $HOME/.rbenv/shims
-loadpath $HOME/julia/usr/bin
 loadpath $HOME/flutter/bin
 
 if [ -d "$HOME/julia/libmxnet" ] ; then
