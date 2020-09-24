@@ -28,7 +28,7 @@
 [color]
   ui = true
 [user]
-  email = ohigashi.yuta@qiita.com
+  email = ohigashi.yuta@a-tm.co.jp
   name = Yuta Ohigashi
 [core]
   pager = less -r -M
