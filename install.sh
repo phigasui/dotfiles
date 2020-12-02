@@ -5,5 +5,5 @@ do
     [[ $f == ".git" ]] && continue
     [[ $f == ".DS_Store" ]] && continue
 
-    ln -sf $HOME/dotfiles/$f $HOME/$f
+    ln -sf $(echo $(pwd))/$f $HOME/$f
 done
