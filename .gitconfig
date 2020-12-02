@@ -9,7 +9,7 @@
   cc = !"git restore $(git merge-base origin/master HEAD)"
   cf = !"git rebase -i $(git merge-base origin/master HEAD)"
   cp = cherry-pick
-  cw = !"git add . && git commit --allow-empty -m '[ci skip] wip'"
+  cw = !"git add . && git commit --no-verify --allow-empty -m '[ci skip] wip'"
   d = diff
   dt = switch -d
   f = fetch --prune
@@ -33,6 +33,7 @@
 [core]
   pager = less -r -M
   excludesfile = /Users/h-1456/.gitignore_global
+  editor = emacsclient
 [rebase]
   autosquash = true
 [tig "bind"]

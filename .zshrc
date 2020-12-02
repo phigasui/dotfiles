@@ -101,7 +101,7 @@ alias julia="$HOME/julia/julia"
 # local setting in MacBookAir
 alias brew='env PATH=${PATH/\/Users\/yuta_oohigashi\/.pyenv\/shims:/} brew'
 if [ -x "`which emacs 2>/dev/null`" ]; then
-    EDITOR='emacs'
+    EDITOR='emacsclient'
     alias vim='emacs'
     alias vimtutor='emacs /usr/local/share/emacs/24.4/etc/tutorials/TUTORIAL.ja'
 fi
