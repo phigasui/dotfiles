@@ -105,8 +105,8 @@ if [ -x "`which emacs 2>/dev/null`" ]; then
     alias vim='emacs'
     alias vimtutor='emacs /usr/local/share/emacs/24.4/etc/tutorials/TUTORIAL.ja'
 fi
-if [ -x "`which rmtrash 2>/dev/null`" ]; then
-    alias rm='rmtrash'
+if [ -x "`which trash-put 2>/dev/null`" ]; then
+    alias rm='trash-put'
 else
     if ! [ -d "$HOME/.Trash/" ];then
         mkdir $HOME/.Trash/
