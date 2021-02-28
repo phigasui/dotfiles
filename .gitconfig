@@ -32,7 +32,7 @@
   name = Yuta Ohigashi
 [core]
   pager = less -r -M
-  excludesfile = /Users/h-1456/.gitignore_global
+  excludesfile = ~/.gitignore_global
   editor = emacsclient
 [rebase]
   autosquash = true
