@@ -92,7 +92,7 @@ loadpath $HOME/.rbenv/shims
 loadpath $HOME/flutter/bin
 loadpath $HOME/flutter/bin
 loadpath $HOME/julia/usr/bin
-loadpath $HOME/.nodebrew/current/bin
+loadpath $HOME/.nodenv/shims
 loadpath /usr/local/opt/mysql@5.6/bin
 
 export LDFLAGS="-L/usr/local/opt/mysql@5.6/lib"
