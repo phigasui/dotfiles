@@ -1,5 +1,3 @@
-fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
-
 autoload -Uz compinit
 autoload -Uz vcs_info
 autoload -Uz colors
@@ -93,11 +91,7 @@ loadpath $HOME/flutter/bin
 loadpath $HOME/flutter/bin
 loadpath $HOME/julia/usr/bin
 loadpath $HOME/.nodenv/shims
-loadpath /usr/local/opt/mysql@5.6/bin
-
-export LDFLAGS="-L/usr/local/opt/mysql@5.6/lib"
-export CPPFLAGS="-I/usr/local/opt/mysql@5.6/include"
-export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+loadpath /opt/homebrew/bin
 
 
 # commands
