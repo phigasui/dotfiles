@@ -85,14 +85,11 @@ function loadpath() {
 }
 
 loadpath $HOME/.bin
-loadpath $HOME/.pyenv/shims
-loadpath $HOME/.rbenv/shims
-loadpath $HOME/flutter/bin
 loadpath $HOME/flutter/bin
 loadpath $HOME/julia/usr/bin
-loadpath $HOME/.nodenv/shims
 loadpath /opt/homebrew/bin
 
+eval "$(anyenv init -)"
 
 # commands
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
