@@ -1,5 +1,3 @@
-fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
-
 autoload -Uz compinit
 autoload -Uz vcs_info
 autoload -Uz colors
@@ -87,18 +85,11 @@ function loadpath() {
 }
 
 loadpath $HOME/.bin
-loadpath $HOME/.pyenv/shims
-loadpath $HOME/.rbenv/shims
-loadpath $HOME/flutter/bin
 loadpath $HOME/flutter/bin
 loadpath $HOME/julia/usr/bin
-loadpath $HOME/.nodenv/shims
-loadpath /usr/local/opt/mysql@5.6/bin
+loadpath /opt/homebrew/bin
 
-export LDFLAGS="-L/usr/local/opt/mysql@5.6/lib"
-export CPPFLAGS="-I/usr/local/opt/mysql@5.6/include"
-export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
-
+eval "$(anyenv init -)"
 
 # commands
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
