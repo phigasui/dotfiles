@@ -1,25 +1,25 @@
 [alias]
   a = add
   b = branch
-  bc = !"git branch --merged origin/master | grep -vE 'HEAD' | xargs git branch -d"
+  bc = !"git branch --merged origin/HEAD | grep -vE 'HEAD' | xargs git branch -d"
   bd = branch -D
   bn = switch -c
-  br = merge-base origin/master HEAD
+  br = merge-base origin/HEAD HEAD
   c = commit
-  cc = !"git restore $(git merge-base origin/master HEAD)"
-  cf = !"git rebase -i $(git merge-base origin/master HEAD)"
+  cc = !"git restore $(git merge-base origin/HEAD HEAD)"
+  cf = !"git rebase -i $(git merge-base origin/HEAD HEAD)"
   cp = cherry-pick
   cw = !"git add . && git commit --no-verify --allow-empty -m '[ci skip] wip'"
   d = diff
   dt = switch -d
   f = fetch --prune
-  om = !"git fetch --prune && git switch -d origin/master"
+  om = !"git fetch --prune && git switch -d origin/HEAD"
   pf = push --force-with-lease
   pl = pull
   pu = !"git push -u origin $(git branch --format='%(refname:short)' --contains)"
   rev = !"sh -c 'git cw && git fetch && git switch -d origin/$1' -"
   r = rebase
-  ro = rebase origin/master
+  ro = rebase origin/HEAD
   rs = restore
   rsu = restore --stage
   s = status
