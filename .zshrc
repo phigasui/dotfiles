@@ -27,6 +27,9 @@ zstyle ':vcs_info:*' actionformats '%F{red}%c%u%b(%a)%f'
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
 
+setopt inc_append_history
+setopt share_history
+
 PROMPT=''
 PROMPT+='%* '
 # PROMPT+='%n@%m'
