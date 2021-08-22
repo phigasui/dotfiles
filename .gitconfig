@@ -16,7 +16,7 @@
   om = !"git fetch --prune && git switch -d origin/HEAD"
   pf = push --force-with-lease
   pl = pull
-  pu = !"git push -u origin $(git branch --format='%(refname:short)' --contains)"
+  pu = !"git push -u origin HEAD"
   rev = !"sh -c 'git cw && git fetch && git switch -d origin/$1' -"
   r = rebase
   ro = rebase origin/HEAD
