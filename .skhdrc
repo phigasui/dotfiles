@@ -6,3 +6,6 @@ ctrl + cmd - l : yabai -m window --warp east
 ctrl + cmd - u : yabai -m window --grid 1:1:0:0:1:1
 ctrl + cmd - f : yabai -m window --toggle float
 ctrl + cmd - r : yabai -m space --rotate 90
+
+cmd + shift - z : osascript -e 'tell application "zoom.us" to activate' -e 'tell application "System Events" to keystroke "a" using {command down, shift down}'
+cmd + shift - x : osascript -e 'tell application "zoom.us" to activate' -e 'tell application "System Events" to keystroke "v" using {command down, shift down}'
