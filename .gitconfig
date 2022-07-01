@@ -9,7 +9,7 @@
   cc = !"git restore $(git merge-base origin/HEAD HEAD)"
   cf = !"git rebase -i $(git merge-base origin/HEAD HEAD)"
   cp = cherry-pick
-  cw = !"git add . && git commit --no-verify --allow-empty -m '[ci skip] wip'"
+  cw = !"git commit --no-verify --allow-empty -m '[ci skip] wip'"
   d = diff
   dt = switch -d
   f = fetch --prune
@@ -39,6 +39,7 @@
 [tig "bind"]
   diff = F ?!git commit --fixup %(commit)
   diff = S ?!git commit --squash %(commit)
+  main = A ?!git commit --amend
   main = F ?!git commit --fixup %(commit)
   main = H ?!git reset %(commit)
   main = R ?!git rebase -i %(commit)
