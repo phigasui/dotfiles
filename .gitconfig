@@ -1,30 +1,35 @@
 [alias]
   a = add
   b = branch
-  bc = !"git branch --merged origin/HEAD | grep -vE 'HEAD' | xargs git branch -d"
+  bc = branch-clean
   bd = branch -D
   bn = switch -c
-  br = merge-base origin/HEAD HEAD
+  br = branch-root
   c = commit
-  cc = !"git restore $(git merge-base origin/HEAD HEAD)"
-  cf = !"git rebase -i $(git merge-base origin/HEAD HEAD)"
+  cc = commit-clear
   cp = cherry-pick
-  cw = !"git commit --no-verify --allow-empty -m '[ci skip] wip'"
+  cw = commit-wip
   d = diff
   dt = switch -d
   f = fetch --prune
-  om = !"git fetch --prune && git switch -d origin/HEAD"
+  oh = orign-head
   pf = push --force-with-lease
-  pl = pull
-  pu = !"git push -u origin HEAD"
-  rev = !"sh -c 'git cw && git fetch && git switch -d origin/$1' -"
+  pu = push -u origin HEAD
   r = rebase
-  ro = rebase origin/HEAD
+  ro = rebase -i origin/HEAD
   rs = restore
   rsu = restore --stage
   s = status
   sw = switch
-  tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+
+  branch-clean = !"git branch --merged origin/HEAD | grep -vE 'HEAD' | xargs git branch -d"
+  branch-root = merge-base origin/HEAD HEAD
+  commit-clear = !"git reset origin/HEAD"
+  commit-wip = !"git commit --no-verify --allow-empty -m '[ci skip] wip'"
+  orign-head = !"git fetch --prune && git switch -d origin/HEAD"
+  reset-origin = !"git reset --hard origin/$(git branch --show-current)"
+  review = !"sh -c 'git cw && git fetch && git switch -d origin/$1' -"
+  tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
 [color]
   ui = true
 [user]
