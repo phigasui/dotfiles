@@ -28,8 +28,8 @@
 [color]
   ui = true
 [user]
-  email = ohigashi.yuta@a-tm.co.jp
-  name = Yuta Ohigashi
+  email = phigasui@gmail.com
+  name = phigasui
 [core]
   pager = less -r -M
   excludesfile = ~/.gitignore_global
@@ -47,3 +47,5 @@
   status = C !git commit -v
 [advice]
   detachedHead = false
+[github]
+  user = phigasui
