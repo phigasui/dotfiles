@@ -1,12 +1,28 @@
+# window の移動
 ctrl + cmd - h : yabai -m window --warp west
 ctrl + cmd - j : yabai -m window --warp south
 ctrl + cmd - k : yabai -m window --warp north
 ctrl + cmd - l : yabai -m window --warp east
 
-ctrl + cmd - u : yabai -m window --grid 1:1:0:0:1:1
+# layout の切り替え
+## 指定ウィンドウを全画面表示
 ctrl + cmd - f : yabai -m space --layout float && yabai -m window --grid 1:1:0:0:1:1
-ctrl + cmd - r : yabai -m space --rotate 90
+
+## 等分割
 ctrl + cmd - b : yabai -m space --layout bsp
 
+## 分割方向のローテート
+ctrl + cmd - r : yabai -m space --rotate 90
+
+## Slack 用配置
+ctrl + cmd - s : yabai -m config split_type vertical && yabai -m config split_ratio 0.8 && yabai -m space --layout bsp && yabai -m config split_type auto && yabai -m config split_ratio 0.5
+
+# 特定アプリケーション操作ショートカット
+## Zoom マイクミュートトグル
 cmd + shift - z : osascript -e 'tell application "zoom.us" to activate' -e 'tell application "System Events" to keystroke "a" using {command down, shift down}'
+
+## Zoom カメラトグル
 cmd + shift - x : osascript -e 'tell application "zoom.us" to activate' -e 'tell application "System Events" to keystroke "v" using {command down, shift down}'
+
+## 勤怠
+ctrl + cmd + shift - i : open https://leaner-co-jp.slack.com/archives/D03GKFDF1V2 && osascript -e 'delay 0.5' -e 'tell application "System Events" to keystroke "/jobcan_touch"' -e 'delay 1' -e 'tell application "System Events" to keystroke return' -e 'tell application "System Events" to keystroke return using {command down}' && open https://leaner-co-jp.slack.com/archives/CGJ6Q4FU6

@@ -92,7 +92,7 @@ loadpath $HOME/flutter/bin
 loadpath $HOME/julia/usr/bin
 loadpath /opt/homebrew/bin
 
-eval "$(anyenv init -)"
+. "$(brew --prefix asdf)/libexec/asdf.sh"
 
 # commands
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
