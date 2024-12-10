@@ -13,7 +13,7 @@
   dt = switch -d
   f = fetch --prune
   oh = orign-head
-  pf = push --force-with-lease
+  pf = push --force-with-lease --force-if-includes
   pu = push -u origin HEAD
   r = rebase
   ro = rebase -i origin/HEAD
@@ -26,6 +26,7 @@
   branch-root = merge-base origin/HEAD HEAD
   commit-clear = !"git reset origin/HEAD"
   commit-wip = !"git commit --no-verify --allow-empty -m '[ci skip] wip'"
+  diff-remote = !"git diff $(git branch --show-current) origin/$(git branch --show-current)"
   orign-head = !"git fetch --prune && git switch -d origin/HEAD"
   reset-origin = !"git reset --hard origin/$(git branch --show-current)"
   review = !"sh -c 'git cw && git fetch && git switch -d origin/$1' -"
