@@ -75,10 +75,6 @@ else
     alias rm='mv --backup=numbered --target-directory=${HOME}/.Trash'
 fi
 
-if [ -f "$HOME/.zshrc_local" ];then
-    . "$HOME/.zshrc_local"
-fi
-
 # loadpaths
 function loadpath() {
     libpath=${1:?"You have to specify a library path"}
@@ -88,11 +84,12 @@ function loadpath() {
 }
 
 loadpath $HOME/.bin
-loadpath $HOME/flutter/bin
-loadpath $HOME/julia/usr/bin
 loadpath /opt/homebrew/bin
-
-. "$(brew --prefix asdf)/libexec/asdf.sh"
 
 # commands
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+
+eval "$(direnv hook zsh)"
+eval "$(mise activate zsh)"
+
+source ~/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization script
