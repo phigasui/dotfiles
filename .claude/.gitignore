@@ -1,0 +1,29 @@
+# Runtime / cache data
+backups/
+cache/
+debug/
+file-history/
+history.jsonl
+ide/
+mcp-needs-auth-cache.json
+paste-cache/
+plans/
+policy-limits.json
+projects/
+session-env/
+shell-snapshots/
+stats-cache.json
+statsig/
+tasks/
+telemetry/
+todos/
+usage-data/
+
+# Plugins (managed by Claude Code)
+plugins/
+
+# Memory (project-specific, managed separately)
+memory/
+
+# Local overrides (machine-specific)
+settings.local.json
