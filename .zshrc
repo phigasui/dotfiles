@@ -93,3 +93,4 @@ eval "$(direnv hook zsh)"
 eval "$(mise activate zsh)"
 
 source ~/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization script
+export PATH="$HOME/.local/bin:$PATH"

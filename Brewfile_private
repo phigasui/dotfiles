@@ -1,0 +1,4 @@
+cask "adobe-creative-cloud"
+cask "kicad"
+cask "native-access"
+cask "vivaldi-snapshot"
