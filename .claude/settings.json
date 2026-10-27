@@ -41,7 +41,116 @@
       "Bash(bash:*)",
       "Bash(sh:*)",
       "Bash(chmod:*)",
-      "Bash(open:*)"
+      "Bash(open:*)",
+      "Bash(gh api:*)",
+      "Bash(gh issue create:*)",
+      "Bash(gh project item-add:*)",
+      "Bash(gh auth:*)",
+      "Bash(gh issue edit:*)",
+      "Bash(gh issue comment:*)",
+      "Bash(gh issue close:*)",
+      "Bash(for:*)",
+      "Bash(do gh project item-add 10 --owner leaner-co-jp --url https://github.com/leaner-co-jp/leaner-purchasing/issues/$issue)",
+      "Bash(done)",
+      "Bash(do)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\n簡易比較CSVのインポート防止機能を追加\n\nリーナー見積の簡易比較CSVには「決定済み」カラムが含まれているため、\nこのカラムの存在をチェックし、誤ってインポートされた場合に\n適切なエラーメッセージを表示するようにした。\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(gh pr create:*)",
+      "Bash(docker compose run:*)",
+      "Bash(git commit:*)",
+      "Bash(gh issue list:*)",
+      "Bash(gh issue view:*)",
+      "Bash(gh project list:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr edit:*)",
+      "Bash(git reset:*)",
+      "Bash(git log:*)",
+      "Bash(.specify/scripts/bash/create-new-feature.sh:*)",
+      "Bash(.specify/scripts/bash/setup-plan.sh:*)",
+      "Bash(.specify/scripts/bash/update-agent-context.sh:*)",
+      "Bash(.specify/scripts/bash/check-prerequisites.sh:*)",
+      "Bash(npm run generate:api:*)",
+      "Bash(npm run:*)",
+      "Bash(npx tsc:*)",
+      "WebSearch",
+      "Bash(gh project field-list:*)",
+      "Bash(gh project item-list:*)",
+      "Bash(git restore:*)",
+      "Bash(gh pr diff:*)",
+      "Bash(npm install)",
+      "Bash(git show-ref:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(git -C /Users/phigasui/leaner/leaner-purchasing log --oneline -10)",
+      "Bash(git -C /Users/phigasui/leaner/leaner-purchasing show 6b7967ba4 --stat)",
+      "Bash(git -C /Users/phigasui/leaner/leaner-purchasing show 6b7967ba4:frontend/app_standard/components/PurchaseRequisitionCreateForm.tsx)",
+      "Bash(git branch:*)",
+      "Bash(git show:*)",
+      "Bash(npx prettier:*)",
+      "Bash(gh pr list:*)",
+      "Bash(git fetch:*)",
+      "Bash(gh project view:*)",
+      "Bash(gh repo view:*)",
+      "Bash(1.3'` を追加\\\\n-:*)",
+      "Bash(git -C /Users/phigasui/leaner/leaner-purchasing show:*)",
+      "Bash(git -C /Users/phigasui/leaner/leaner-purchasing fetch origin develop)",
+      "Bash(git -C /Users/phigasui/leaner/leaner-purchasing ls-tree:*)",
+      "Bash(git rebase origin/develop)",
+      "Bash(cd /Users/phigasui/leaner/leaner-purchasing && git checkout feat/solid-queue-phase-1 && git stash pop)",
+      "Bash(git rebase feat/solid-queue-phase-1 2>&1)",
+      "Bash(git add server/app/jobs/application_job.rb server/docker-compose.yml server/config/initializers/sentry.rb server/config/initializers/datadog.rb && git rebase --continue)",
+      "Bash(git rebase feat/solid-queue-phase-1)",
+      "Bash(git rebase --skip)",
+      "mcp__notion__notion-fetch",
+      "Bash(git merge origin/feature/solidqueue-phase2-deliver-now)",
+      "Bash(git merge origin/feat/solid-queue-phase-3)",
+      "Bash(git stash && git checkout -b introduce/favorite-items origin/develop 2>&1 && git stash pop 2>&1)",
+      "Bash(find /Users/phigasui/leaner/leaner-purchasing/server/app/controllers -maxdepth 1 -type f -name \"*.rb\" | xargs basename -a)",
+      "WebFetch(domain:aws.amazon.com)",
+      "WebFetch(domain:speakerdeck.com)",
+      "mcp__notion__notion-update-page",
+      "Bash(gh pr:*)",
+      "mcp__claude_ai_Slack__slack_read_thread",
+      "Bash(git stash:*)",
+      "Bash(direnv exec:*)",
+      "mcp__claude_ai_Notion__notion-fetch",
+      "mcp__claude_ai_Notion__notion-query-data-sources",
+      "mcp__claude_ai_Notion__notion-update-page",
+      "Bash(docker network:*)",
+      "WebFetch(domain:leaner-technologies-inc.sentry.io)",
+      "mcp__claude_ai_Sentry__get_issue_details",
+      "Read(//Users/phigasui/phigasui/dotfiles/.claude/plans/**)",
+      "Bash(mkdir -p /Users/phigasui/.claude/plans/)",
+      "mcp__claude_ai_Notion__notion-search",
+      "mcp__claude_ai_Notion__notion-get-comments",
+      "WebFetch(domain:bugs.ruby-lang.org)",
+      "WebFetch(domain:rubyreferences.github.io)",
+      "mcp__claude_ai_Sentry__get_sentry_resource",
+      "mcp__claude_ai_Notion__notion-get-users",
+      "mcp__claude_ai_Notion__notion-create-pages",
+      "mcp__claude_ai_Slack__slack_read_channel",
+      "Skill(system-spec)",
+      "WebFetch(domain:docs.google.com)",
+      "WebFetch(domain:www.cxml.org)",
+      "WebFetch(domain:xml.cxml.org)",
+      "Read(//private/tmp/**)",
+      "Bash(unzip -o cXML_DTDs.zip -d cXML_DTDs)",
+      "Bash(ruby -e 'Pathname.new\\(\".\"\\)' 2>&1)",
+      "Bash(ruby -e 'Pathname.new\\(\".\"\\)' 2>&1; echo \"exit: $?\")",
+      "Bash(file tmp/asone_cxml/*)",
+      "Bash(nkf --guess tmp/asone_cxml/*)",
+      "Bash(for f:*)",
+      "Bash(file -I tmp/asone_cxml_0.0.2/*.txt)",
+      "Bash(nkf --guess tmp/asone_cxml_0.0.2/*.txt)",
+      "mcp__claude_ai_Sentry__search_issue_events",
+      "Bash(file -I /Users/phigasui/leaner/leaner-purchasing/tmp/asone_cxml_0.0.3/*)",
+      "Bash(nkf --guess /Users/phigasui/leaner/leaner-purchasing/tmp/asone_cxml_0.0.3/ConfimationRequest_1.txt)",
+      "Bash(nkf --guess /Users/phigasui/leaner/leaner-purchasing/tmp/asone_cxml_0.0.3/*.txt)",
+      "mcp__claude_ai_Sentry__get_issue_tag_values",
+      "mcp__claude_ai_Notion__notion-create-database",
+      "Bash(brew info:*)",
+      "Bash(gh project:*)"
     ],
     "deny": [
       "Bash(sudo:*)",
@@ -97,28 +206,19 @@
       "Edit(/Applications/*)",
       "Edit(/Volumes/*)",
       "Edit(/cores/*)"
-    ]
+    ],
+    "ask": [],
+    "defaultMode": "acceptEdits"
   },
   "model": "opus[1m]",
   "hooks": {
-    "Notification": [
+    "PreToolUse": [
       {
-        "matcher": "*",
+        "matcher": "Bash",
         "hooks": [
           {
             "type": "command",
-            "command": "osascript -e 'display notification \"Claude があなたの入力を待っています\" with title \"Claude Code\" sound name \"Ping\"'"
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "Edit|Write|MultiEdit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "jq -r '.tool_input.file_path // empty' | xargs -I{} emacsclient --no-wait {}"
+            "command": "python3 ~/.claude/hooks/auto-approve-readonly.py"
           }
         ]
       }
@@ -131,7 +231,9 @@
   "enabledPlugins": {
     "slack@claude-plugins-official": true,
     "leaner-knowledge@leaner-plugins": true,
-    "ruby-lsp@claude-plugins-official": true
+    "ruby-lsp@claude-plugins-official": true,
+    "example-skills@anthropic-agent-skills": true,
+    "document-skills@anthropic-agent-skills": true
   },
   "extraKnownMarketplaces": {
     "leaner-plugins": {
@@ -139,7 +241,16 @@
         "source": "github",
         "repo": "leaner-co-jp/leaner-claude-plugins"
       }
+    },
+    "anthropic-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/skills"
+      }
     }
   },
-  "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  "language": "Japanese",
+  "theme": "light",
+  "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+  "effortLevel": "high"
 }
