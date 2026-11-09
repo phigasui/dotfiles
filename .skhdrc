@@ -17,6 +17,5 @@ ctrl + cmd - r : yabai -m space --rotate 90
 ## 水平等分割
 ctrl + cmd - s: yabai -m window --toggle split; yabai -m space --balance; yabai -m config auto_balance on
 
-# 特定アプリケーション操作ショートカット
 ## 勤怠
 ctrl + cmd + shift - i : open https://leaner-co-jp.slack.com/archives/D095L2SGK3P
