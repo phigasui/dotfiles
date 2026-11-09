@@ -1,4 +1,5 @@
 # Runtime / cache data
+.last-cleanup
 backups/
 cache/
 debug/
@@ -6,12 +7,17 @@ file-history/
 history.jsonl
 ide/
 mcp-needs-auth-cache.json
+orca-agent-view.json
 paste-cache/
 plans/
-policy-limits.json
+policy-limits.json*
 projects/
+remote-settings.json*
 session-env/
+sessions/
+settings.json.bak
 shell-snapshots/
+state/
 stats-cache.json
 statsig/
 tasks/
@@ -19,8 +25,9 @@ telemetry/
 todos/
 usage-data/
 
-# Plugins (managed by Claude Code)
+# Plugins & Skills
 plugins/
+skills/
 
 # Memory (project-specific, managed separately)
 memory/

@@ -1,21 +1,25 @@
-# window の移動
-ctrl + cmd - h : yabai -m window --warp west
-ctrl + cmd - j : yabai -m window --warp south
-ctrl + cmd - k : yabai -m window --warp north
-ctrl + cmd - l : yabai -m window --warp east
+# ==============================================================================
+# alpatile window management (yabai からの移行)
+# ==============================================================================
+
+# window の移動 (Warp)
+ctrl + cmd - h : alpatile window --warp west
+ctrl + cmd - j : alpatile window --warp south
+ctrl + cmd - k : alpatile window --warp north
+ctrl + cmd - l : alpatile window --warp east
 
 # layout の切り替え
-## 指定ウィンドウを全画面表示
-ctrl + cmd - f : yabai -m space --layout float && yabai -m window --grid 1:1:0:0:1:1
+## 指定ウィンドウを全画面表示 (float + maximize)
+ctrl + cmd - f : alpatile space --layout float && alpatile window --maximize
 
-## 等分割
-ctrl + cmd - b : yabai -m space --layout bsp
+## 等分割 (BSP)
+ctrl + cmd - b : alpatile space --layout bsp
 
-## 分割方向のローテート
-ctrl + cmd - r : yabai -m space --rotate 90
+## 分割方向のローテート (90度回転)
+ctrl + cmd - r : alpatile space --rotate 90
 
-## 水平等分割
-ctrl + cmd - s: yabai -m window --toggle split; yabai -m space --balance; yabai -m config auto_balance on
+## 水平/垂直分割の切り替え & バランス均等化
+ctrl + cmd - s : alpatile window --toggle split && alpatile space --balance
 
 # 特定アプリケーション操作ショートカット
 ## 勤怠

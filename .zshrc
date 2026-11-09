@@ -54,6 +54,7 @@ alias mv='mv -i'
 alias sudo='sudo ' # For using local alias
 alias timestamp='date +%s'
 alias unmount='diskutil unmount'
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 alias emacsd="emacs --daemon"
 alias ed='emacsd'
 alias emacsc='emacsclient -nw'
@@ -84,13 +85,25 @@ function loadpath() {
 }
 
 loadpath $HOME/.bin
+loadpath $HOME/.local/bin
+loadpath $HOME/flutter/bin
+loadpath $HOME/julia/usr/bin
+loadpath $HOME/.slack/bin
 loadpath /opt/homebrew/bin
+loadpath /opt/homebrew/sbin
 
 # commands
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+
 
 eval "$(direnv hook zsh)"
 eval "$(mise activate zsh)"
 
 source ~/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization script
 export PATH="$HOME/.local/bin:$PATH"
+
+# Added by Antigravity
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+
+# OpenClaw Completion
+[ -f "$HOME/.openclaw/completions/openclaw.zsh" ] && source "$HOME/.openclaw/completions/openclaw.zsh"
