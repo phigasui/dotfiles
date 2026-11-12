@@ -26,3 +26,11 @@ fi
 ln -sf "$CLAUDE_SRC" "$CLAUDE_DEST"
 
 ln -sf $(echo $(pwd))/aquaskk/keymap.conf $HOME/Library/Application\ Support/AquaSKK/
+
+# alpatiled LaunchAgent
+ALPATILED_PLIST="$HOME/phigasui/alpatile/launchd/com.phigasui.alpatiled.plist"
+if [ -f "$ALPATILED_PLIST" ]; then
+    mkdir -p "$HOME/Library/LaunchAgents"
+    ln -sf "$ALPATILED_PLIST" "$HOME/Library/LaunchAgents/com.phigasui.alpatiled.plist"
+fi
+
