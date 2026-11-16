@@ -8,6 +8,9 @@ ctrl + cmd - j : alpatile window --warp south
 ctrl + cmd - k : alpatile window --warp north
 ctrl + cmd - l : alpatile window --warp east
 
+# display 間の移動
+ctrl + cmd - n : alpatile window --display next
+
 # layout の切り替え
 ## 指定ウィンドウを全画面表示 (float + maximize)
 ctrl + cmd - f : alpatile space --layout float && alpatile window --maximize
