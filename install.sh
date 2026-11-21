@@ -19,3 +19,10 @@ if [ -d "$HOME/.config/karabiner" ] && [ ! -L "$HOME/.config/karabiner" ]; then
 else
     ln -sfn $(echo $(pwd))/karabiner $HOME/.config/karabiner
 fi
+
+# alpatiled LaunchAgent
+ALPATILED_PLIST="$HOME/phigasui/alpatile/launchd/com.phigasui.alpatiled.plist"
+if [ -f "$ALPATILED_PLIST" ]; then
+    mkdir -p "$HOME/Library/LaunchAgents"
+    ln -sf "$ALPATILED_PLIST" "$HOME/Library/LaunchAgents/com.phigasui.alpatiled.plist"
+fi
