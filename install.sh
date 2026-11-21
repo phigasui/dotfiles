@@ -21,11 +21,11 @@ else
 fi
 
 # herdr は ~/.config/herdr に socket・ログ・session.json などが同居するため、config.toml だけをファイル単位でリンクする
-mkdir -p $HOME/.config/herdr
+mkdir -p "$HOME/.config/herdr"
 if [ -e "$HOME/.config/herdr/config.toml" ] && [ ! -L "$HOME/.config/herdr/config.toml" ]; then
     echo "~/.config/herdr/config.toml が実ファイルのため、リンクしません"
 else
-    ln -sf $(echo $(pwd))/herdr/config.toml $HOME/.config/herdr/config.toml
+    ln -sf "$(pwd)/herdr/config.toml" "$HOME/.config/herdr/config.toml"
 fi
 
 # alpatiled LaunchAgent
