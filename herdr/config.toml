@@ -1,0 +1,19 @@
+onboarding = false
+
+[theme]
+name = "tokyo-night-day"
+auto_switch = false
+
+# ~/.tmux.conf に合わせたキー設定
+[keys]
+# set -g prefix C-z
+prefix = "ctrl+z"
+# bind h split-window -h（左右に分割）
+split_vertical = "prefix+h"
+# bind v split-window -v（上下に分割）
+split_horizontal = "prefix+v"
+# prefix+h を分割に使うので、ペイン移動は tmux 既定と同じ prefix+矢印にする
+focus_pane_left = "prefix+left"
+focus_pane_down = "prefix+down"
+focus_pane_up = "prefix+up"
+focus_pane_right = "prefix+right"
